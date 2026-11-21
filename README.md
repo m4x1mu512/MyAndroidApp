@@ -1,16 +1,27 @@
-# MyAndroidApp
+# Крестики-нолики (Android)
 
-Минимальный шаблон Android-приложения на Kotlin с автоматической сборкой APK через GitHub Actions.
+Игра «Крестики-нолики» на Kotlin: Material 3, ViewBinding, сборка APK через GitHub Actions.
 
 ## Что внутри
 
 - `app/` — модуль приложения (Kotlin, ViewBinding, Material 3)
-- `MainActivity.kt` — простой счётчик (демо-экран)
+- `GameEngine.kt` — чистая логика поля 3×3 и ИИ на алгоритме «минимакс» (непобедимый)
+- `MainActivity.kt` — экран игры: ходы, счёт, статус партии, сохранение состояния
 - `.github/workflows/build-apk.yml` — сборка debug APK в CI
+
+## Возможности
+
+- Два режима: игра с компьютером и игра на одном устройстве (два игрока)
+- Непобедимый ИИ (минимакс): лучшее, на что можно рассчитывать — ничья
+- Подсчёт счёта по партиям и его сброс
+- Подсветка победной линии
+- Сохранение партии и счёта при повороте экрана
+- Тёмная и светлая темы (Material 3 DayNight)
 
 ## Как получить APK
 
-1. Запушьте изменения в `main` (или запустите workflow вручную: **Actions → Build APK → Run workflow**).
+1. Запушьте изменения в `main` или в ветку `feature/**` — либо запустите workflow вручную:
+   **Actions → Build APK → Run workflow**.
 2. Дождитесь завершения job **Assemble debug APK**.
 3. Скачайте артефакт `app-debug-apk` со страницы запуска workflow — внутри `app-debug.apk`.
 
@@ -40,7 +51,7 @@ APK появится в `app/build/outputs/apk/debug/app-debug.apk`.
 
 - `applicationId`: `com.example.myandroidapp`
 - `minSdk`: 24, `targetSdk` / `compileSdk`: 34
-- AGP 8.5.2, Kotlin 1.9.24, Gradle 8.7
+- AGP 8.5.2, Kotlin 1.9.24, Gradle 8.7, Material 1.12.0
 
 ## Подпись release-сборки
 
