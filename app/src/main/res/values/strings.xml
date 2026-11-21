@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Android App</string>
+    <string name="increment">+1</string>
+    <string name="reset">Сбросить</string>
+    <string name="counter_value">%1$d</string>
+</resources>
