@@ -63,39 +63,47 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <com.google.android.material.button.MaterialButton
+                <ImageView
                     android:id="@+id/cell0"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    app:backgroundTint="@color/cell_background"
-                    app:cornerRadius="12dp"
-                    tools:ignore="UnusedAttribute" />
+                    android:background="@drawable/cell_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
 
-                <com.google.android.material.button.MaterialButton
+                <ImageView
                     android:id="@+id/cell1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    app:backgroundTint="@color/cell_background"
-                    app:cornerRadius="12dp" />
+                    android:background="@drawable/cell_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
 
-                <com.google.android.material.button.MaterialButton
+                <ImageView
                     android:id="@+id/cell2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    app:backgroundTint="@color/cell_background"
-                    app:cornerRadius="12dp" />
+                    android:background="@drawable/cell_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
             </LinearLayout>
 
             <LinearLayout
@@ -104,38 +112,47 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <com.google.android.material.button.MaterialButton
+                <ImageView
                     android:id="@+id/cell3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    app:backgroundTint="@color/cell_background"
-                    app:cornerRadius="12dp" />
+                    android:background="@drawable/cell_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
 
-                <com.google.android.material.button.MaterialButton
+                <ImageView
                     android:id="@+id/cell4"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    app:backgroundTint="@color/cell_background"
-                    app:cornerRadius="12dp" />
+                    android:background="@drawable/cell_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
 
-                <com.google.android.material.button.MaterialButton
+                <ImageView
                     android:id="@+id/cell5"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    app:backgroundTint="@color/cell_background"
-                    app:cornerRadius="12dp" />
+                    android:background="@drawable/cell_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
             </LinearLayout>
 
             <LinearLayout
@@ -144,38 +161,47 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <com.google.android.material.button.MaterialButton
+                <ImageView
                     android:id="@+id/cell6"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    app:backgroundTint="@color/cell_background"
-                    app:cornerRadius="12dp" />
+                    android:background="@drawable/cell_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
 
-                <com.google.android.material.button.MaterialButton
+                <ImageView
                     android:id="@+id/cell7"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    app:backgroundTint="@color/cell_background"
-                    app:cornerRadius="12dp" />
+                    android:background="@drawable/cell_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
 
-                <com.google.android.material.button.MaterialButton
+                <ImageView
                     android:id="@+id/cell8"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    app:backgroundTint="@color/cell_background"
-                    app:cornerRadius="12dp" />
+                    android:background="@drawable/cell_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
             </LinearLayout>
         </LinearLayout>
 
