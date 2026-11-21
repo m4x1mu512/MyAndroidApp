@@ -4,16 +4,16 @@ import android.content.res.ColorStateList
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.myandroidapp.databinding.ActivityMainBinding
-import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val engine = GameEngine()
-    private val cells = mutableListOf<MaterialButton>()
+    private val cells = mutableListOf<ImageView>()
     private val handler = Handler(Looper.getMainLooper())
 
     private var vsComputer = true
@@ -44,12 +44,8 @@ class MainActivity : AppCompatActivity() {
             binding.cell3, binding.cell4, binding.cell5,
             binding.cell6, binding.cell7, binding.cell8
         )
-        val iconSize = (ICON_SIZE_DP * resources.displayMetrics.density).toInt()
-        cells.forEachIndexed { index, button ->
-            button.iconGravity = MaterialButton.ICON_GRAVITY_CENTER
-            button.iconPadding = 0
-            button.iconSize = iconSize
-            button.setOnClickListener { onCellClicked(index) }
+        cells.forEachIndexed { index, cell ->
+            cell.setOnClickListener { onCellClicked(index) }
         }
     }
 
@@ -114,17 +110,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun render() {
         val winLine = engine.winningLine()?.toSet() ?: emptySet()
-        cells.forEachIndexed { index, button ->
+        cells.forEachIndexed { index, cell ->
             val value = engine.cell(index)
-            button.text = null
-            button.icon = when (value) {
-                GameEngine.X -> AppCompatResources.getDrawable(this, R.drawable.mark_x)
-                GameEngine.O -> AppCompatResources.getDrawable(this, R.drawable.mark_o)
-                else -> null
-            }
+            cell.setImageDrawable(
+                when (value) {
+                    GameEngine.X -> AppCompatResources.getDrawable(this, R.drawable.mark_x)
+                    GameEngine.O -> AppCompatResources.getDrawable(this, R.drawable.mark_o)
+                    else -> null
+                }
+            )
             val background = if (index in winLine) R.color.cell_win else R.color.cell_background
-            button.backgroundTintList = ColorStateList.valueOf(getColor(background))
-            button.contentDescription = getString(
+            cell.backgroundTintList = ColorStateList.valueOf(getColor(background))
+            cell.contentDescription = getString(
                 when (value) {
                     GameEngine.X -> R.string.cell_x
                     GameEngine.O -> R.string.cell_o
@@ -197,7 +194,6 @@ class MainActivity : AppCompatActivity() {
         const val KEY_VS_COMPUTER = "vs_computer"
         const val KEY_FINISHED = "finished"
 
-        const val ICON_SIZE_DP = 56
         const val AI_DELAY_MS = 350L
     }
 }
