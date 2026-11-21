@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">My Android App</string>
-    <string name="increment">+1</string>
-    <string name="reset">Сбросить</string>
-    <string name="counter_value">%1$d</string>
+    <string name="app_name">Крестики-нолики</string>
+    <string name="title">Крестики-нолики</string>
+
+    <string name="status_x_turn">Ход крестиков (X)</string>
+    <string name="status_o_turn">Ход ноликов (O)</string>
+    <string name="status_x_win">Победили крестики!</string>
+    <string name="status_o_win">Победили нолики!</string>
+    <string name="status_draw">Ничья!</string>
+    <string name="status_thinking">Компьютер думает…</string>
+
+    <string name="mode_vs_computer">Играть с компьютером</string>
+    <string name="new_game">Новая игра</string>
+    <string name="reset_score">Сбросить счёт</string>
+    <string name="score_format">X %1$d : %2$d O</string>
+
+    <string name="cell_empty">Клетка %1$d, пусто</string>
+    <string name="cell_x">Клетка %1$d, крестик</string>
+    <string name="cell_o">Клетка %1$d, нолик</string>
 </resources>
