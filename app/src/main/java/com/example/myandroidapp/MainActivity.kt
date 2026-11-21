@@ -1,6 +1,5 @@
 package com.example.myandroidapp
 
-import android.content.res.ColorStateList
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -115,6 +114,7 @@ class MainActivity : AppCompatActivity() {
         gameFinished = false
         engine.reset()
         render()
+        maybeScheduleAi()
     }
 
     private fun render() {
@@ -128,8 +128,10 @@ class MainActivity : AppCompatActivity() {
                     else -> null
                 }
             )
-            val background = if (index in winLine) R.color.cell_win else R.color.cell_background
-            cell.backgroundTintList = ColorStateList.valueOf(getColor(background))
+            // Красим фон именно drawable-ресурсом: backgroundTintList затирал обводку клетки.
+            cell.setBackgroundResource(
+                if (index in winLine) R.drawable.cell_win_background else R.drawable.cell_background
+            )
             cell.contentDescription = getString(
                 when (value) {
                     GameEngine.X -> R.string.cell_x
