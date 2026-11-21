@@ -36,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         restoreState(savedInstanceState)
         setupListeners()
         render()
+        // Если экран пересоздали в момент, когда ход был за компьютером,
+        // партию нужно «доиграть», иначе игра зависнет.
+        maybeScheduleAi()
     }
 
     private fun setupCells() {
@@ -83,11 +86,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
         render()
-        if (!gameFinished && vsComputer && engine.currentPlayer == GameEngine.O) {
-            aiThinking = true
-            render()
-            handler.postDelayed(aiTurn, AI_DELAY_MS)
-        }
+        maybeScheduleAi()
+    }
+
+    /** Планирует ход компьютера, если сейчас его очередь и партия не окончена. */
+    private fun maybeScheduleAi() {
+        if (gameFinished || aiThinking) return
+        if (!vsComputer || engine.currentPlayer != GameEngine.O) return
+
+        aiThinking = true
+        render()
+        handler.postDelayed(aiTurn, AI_DELAY_MS)
     }
 
     private fun performAiTurn() {
