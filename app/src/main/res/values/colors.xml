@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Светлая тема -->
+    <color name="mark_x">#3F51B5</color>
+    <color name="mark_o">#E91E63</color>
+    <color name="mark_empty">#00000000</color>
+
+    <!-- Клетки: хорошо различимы на светлом фоне -->
+    <color name="cell_surface">#F1F1F6</color>
+    <color name="cell_outline">#C5C5D2</color>
+    <color name="cell_win">#4D4CAF50</color>
+    <color name="cell_win_outline">#2E7D32</color>
+</resources>
